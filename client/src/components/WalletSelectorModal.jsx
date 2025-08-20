@@ -5,6 +5,7 @@ import { X } from 'lucide-react';
 // Import the connectors we want to offer
 import { metaMask } from '../connectors';
 import { walletConnect } from '../connectors';
+import walletConnectLogo from '../assets/images/walletconnect.png';
 
 const WalletSelectorModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -34,8 +35,8 @@ const WalletSelectorModal = ({ isOpen, onClose }) => {
             <span>Browser Wallet</span>
           </button>
           <button onClick={() => connectWith(walletConnect)} className="w-full flex items-center justify-start gap-4 text-lg p-4 border rounded-xl hover:bg-gray-100 transition-colors">
-            <img src="https://cloud.walletconnect.com/favicon.ico" alt="WalletConnect" className="w-8 h-8"/>
-            <span>WalletConnect</span>
+             <img src={walletConnectLogo} alt="WalletConnect" className="w-8 h-8"/>  
+                <span>WalletConnect</span>
           </button>
         </div>
       </div>
