@@ -2,30 +2,21 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import TajpeLogo from '../assets/images/TajpeLogo.webp';
-import { metaMask, hooks } from '../connectors';
-
-const { useAccount, useIsActive } = hooks;
+import { useWeb3React } from '@web3-react/core';
+import { metaMask } from '../connectors'; // Keep for disconnect logic
+import WalletSelectorModal from './WalletSelectorModal'; 
 
 const Navbar = () => {
-  const account = useAccount();
-  const isActive = useIsActive();
+    const { account, isActive } = useWeb3React();
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
 
   // --- Wallet & Admin Logic ---
-  const ADMIN_PUBLIC_KEY = "0xf97032d8620f62Cf82520768dA01E775b0317412";
-  const isAdmin = isActive && account && account.toLowerCase() === ADMIN_PUBLIC_KEY.toLowerCase();
-
-  const connectWallet = async () => {
-    try {
-      await metaMask.activate();
-      setIsDropdownOpen(false); // Close dropdown after action
-    } catch (error) {
-      console.error("Failed to connect wallet", error);
-    }
-  };
+  // const ADMIN_PUBLIC_KEY = "0xf97032d8620f62Cf82520768dA01E775b0317412";
+  // const isAdmin = isActive && account && account.toLowerCase() === ADMIN_PUBLIC_KEY.toLowerCase();
 
   const disconnectWallet = () => {
     if (metaMask?.deactivate) {
@@ -34,12 +25,6 @@ const Navbar = () => {
       metaMask.resetState();
     }
     setIsDropdownOpen(false); // Close dropdown after action
-  };
-
-  const changeWallet = () => {
-    // Disconnecting and immediately trying to connect can sometimes be too fast for providers.
-    // The `activate` function itself is designed to handle this, so we can just call it.
-    connectWallet();
   };
 
   const copyAddress = () => {
@@ -52,6 +37,7 @@ const Navbar = () => {
 
 
   return (
+    <>
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -79,42 +65,34 @@ const Navbar = () => {
           {/* --- Right Side Actions (Wallet & Mobile Menu) --- */}
           <div className="flex items-center gap-4">
             {/* Admin Button (Desktop) */}
-            {isAdmin && (
+            {/* {isAdmin && (
               <button
                 onClick={() => navigate('/admin')}
                 className="hidden sm:block bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Admin
               </button>
-            )}
+            )} */}
 
-            {/* Wallet Connect Button & Dropdown */}
-            <div className="hidden md:flex">
-              {!isActive ? (
-                <button
-                  onClick={connectWallet}
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                >
-                  Select Wallet
-                </button>
-              ) : (
-                <div className="relative">
-                  <button
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="bg-indigo-600 text-white flex items-center gap-2 px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                  >
-                    {`${account.substring(0, 4)}...${account.substring(account.length - 4)}`}
+           <div className="hidden md:flex">
+                {!isActive ? (
+                  <button onClick={() => setIsWalletModalOpen(true)} className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                    Select Wallet
                   </button>
-                  {isDropdownOpen && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
-                      <button onClick={copyAddress} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">Copy address</button>
-                      <button onClick={changeWallet} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">Change wallet</button>
-                      <button onClick={disconnectWallet} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">Disconnect</button>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
+                ) : (
+                  <div className="relative">
+                    <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="bg-indigo-600 text-white flex items-center gap-2 px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                      {`${account.substring(0, 4)}...${account.substring(account.length - 4)}`}
+                    </button>
+                    {isDropdownOpen && (
+                      <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                        <button onClick={copyAddress} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">Copy address</button>
+                        <button onClick={disconnectWallet} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">Disconnect</button>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
 
             {/* --- Mobile Menu Button --- */}
             <div className="md:hidden">
@@ -147,36 +125,32 @@ const Navbar = () => {
 
             {/* Wallet and Admin buttons for mobile */}
             <div className="mt-4 pt-4 border-t border-gray-200">
-               {!isActive ? (
-                <button
-                  onClick={() => { connectWallet(); setIsMenuOpen(false); }}
-                  className="w-full text-center bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                >
+              {!isActive ? (
+                <button onClick={() => { setIsWalletModalOpen(true); setIsMenuOpen(false); }} className="w-full text-center bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700">
                   Select Wallet
                 </button>
               ) : (
-                 <div className="px-3 py-2 text-center">
-                    <p className="text-sm font-medium text-gray-800">Connected Wallet:</p>
-                    <p className="text-sm text-gray-600 truncate">{account}</p>
-                    <button onClick={() => { disconnectWallet(); setIsMenuOpen(false); }} className="mt-2 w-full text-center text-sm text-red-600 hover:underline">
-                        Disconnect
-                    </button>
-                 </div>
+                <div className="px-3 py-2 text-center">
+                  <p className="text-sm text-gray-600 truncate">{account}</p>
+                  <button onClick={() => { disconnectWallet(); setIsMenuOpen(false); }} className="mt-2 w-full text-center text-sm text-red-600">Disconnect</button>
+                </div>
               )}
 
-              {isAdmin && (
+              {/* {isAdmin && (
                 <button
                   onClick={() => { navigate('/admin'); setIsMenuOpen(false); }}
                   className="w-full text-center mt-2 bg-green-600 text-white px-3 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
                   Admin Page
                 </button>
-              )}
+              )} */}
             </div>
           </nav>
         </div>
       )}
     </header>
+     <WalletSelectorModal isOpen={isWalletModalOpen} onClose={() => setIsWalletModalOpen(false)} />
+    </>
   );
 };
 

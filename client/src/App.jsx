@@ -8,9 +8,14 @@ import Navbar from './components/Navbar';
 import AboutUs from './pages/AboutUs';
 import Tokenomics from './pages/Tokenomics';
 import Roadmap from './pages/Roadmap';
-import { metaMask, hooks } from './connectors';
 
-const connectors = [[metaMask, hooks]];
+// Import all connectors and their hooks
+import { metaMask, hooks, walletConnect, walletConnectHooks } from './connectors';
+
+const connectors = [
+  [metaMask, hooks],
+  [walletConnect, walletConnectHooks],
+];
 
 const App = () => {
   return (

@@ -65,22 +65,22 @@ const AboutUs = () => {
         <div ref={pageRef} className="bg-gray-50 text-gray-800 overflow-x-hidden" style={{ fontFamily: 'Poppins, sans-serif' }}>
 
             {/* --- Hero Section --- */}
-            <section className="bg-white min-h-screen flex items-center justify-center text-center p-4">
+           <section className="bg-white min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-center justify-center text-center px-4 py-12 md:py-16">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase hero-title text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase hero-title text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>
                         Forging the <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">New Digital</span> Frontier
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto hero-subtitle">
                         Tajpe isn't just a project; it's an ecosystem. We are architects of the decentralized future, building the tools for a new generation of finance and technology.
                     </p>
-                    <button className="mt-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hero-button">
+                    <button className="mt-8 md:md-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hero-button">
                         Explore Our Vision
                     </button>
                 </div>
             </section>
 
             {/* --- Our Vision Section --- */}
-            <section className="py-20 px-4 md:px-8 section">
+            <section className="py-12 md:py-20 px-4 md:px-8 section">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div className="text-center md:text-left">
                         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>Our Vision: <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Your Gateway</span></h2>
@@ -107,7 +107,7 @@ const AboutUs = () => {
             </section>
 
             {/* --- The TJE Token Section --- */}
-             <section className="py-20 px-4 md:px-8 bg-white section border-t border-b border-gray-200">
+             <section className="py-12 md:py-20 px-4 md:px-8 bg-white section border-t border-b border-gray-200">
                 <div className="text-center max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>The <span className="text-purple-600">$TJE</span> Token</h2>
                     <p className="text-lg text-gray-600 mb-12">
@@ -132,7 +132,7 @@ const AboutUs = () => {
 
 
             {/* --- Beyond Crypto Section --- */}
-            <section className="py-20 px-4 md:px-8 section">
+            <section className="py-12 md:py-20 px-4 md:px-8 section">
                  <div className="text-center max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>More Than A <span className="text-indigo-600">Crypto</span> Project</h2>
                     <p className="text-lg text-gray-600 mb-12">

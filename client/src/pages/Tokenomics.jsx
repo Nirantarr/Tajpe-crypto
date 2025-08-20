@@ -9,7 +9,7 @@ const tokenData = {
     name: "Tajpe",
     ticker: "TJE",
     totalSupply: 1_000_000_000, // 1 Billion
-    network: "Solana",
+    network: "Binance Smart Chain (BSC)",
     distribution: [
         { category: "Ecosystem & Community Growth", percentage: 35, color: "#4f46e5", details: "Funding for grants, partnerships, and community incentives to grow the Tajpe ecosystem." },
         { category: "Staking & Validator Rewards", percentage: 25, color: "#7c3aed", details: "Rewards for users who stake TJE and validators who secure the network." },
