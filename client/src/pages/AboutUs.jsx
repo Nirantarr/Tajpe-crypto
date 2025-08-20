@@ -64,16 +64,15 @@ const AboutUs = () => {
     return (
         <div ref={pageRef} className="bg-gray-50 text-gray-800 overflow-x-hidden" style={{ fontFamily: 'Poppins, sans-serif' }}>
 
-            {/* --- Hero Section --- */}
-           <section className="bg-white min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-center justify-center text-center px-4 py-12 md:py-16">
+          <section className="bg-white min-h-[50vh] md:min-h-[60vh] lg:min-h-[80vh] flex items-center justify-center text-center px-4 py-8 md:py-12 lg:py-16">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase hero-title text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>
+                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase hero-title text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>
                         Forging the <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">New Digital</span> Frontier
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto hero-subtitle">
+                    <p className="text-base md:text-lg lg:text-xl text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto hero-subtitle">
                         Tajpe isn't just a project; it's an ecosystem. We are architects of the decentralized future, building the tools for a new generation of finance and technology.
                     </p>
-                    <button className="mt-8 md:md-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hero-button">
+                    <button className="mt-6 md:mt-8 lg:mt-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-3 md:py-4 px-8 md:px-10 rounded-full text-base md:text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hero-button">
                         Explore Our Vision
                     </button>
                 </div>

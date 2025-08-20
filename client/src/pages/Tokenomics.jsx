@@ -54,22 +54,22 @@ const Tokenomics = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // GSAP animations remain the same
-            gsap.from('.page-title', { duration: 1, y: 50, opacity: 0, ease: 'power3.out' });
+            gsap.from('.page-title', { duration: 0.6, y: 50, opacity: 0, ease: 'power3.out' });
             gsap.from('.stat-card', {
-                duration: 0.8, y: 40, opacity: 0, stagger: 0.2, ease: 'power3.out',
+                duration: 0.5, y: 40, opacity: 0, stagger: 0.1, ease: 'power3.out',
                 scrollTrigger: { trigger: '.stats-grid', start: 'top 85%' }
             });
             gsap.from(chartRef.current, {
                 '--p1': 0, '--p2': 0, '--p3': 0, '--p4': 0, '--p5': 0, '--p6': 0,
-                duration: 2, ease: 'power2.inOut',
+                duration: 1, ease: 'power2.inOut',
                 scrollTrigger: { trigger: chartRef.current, start: 'top 75%', toggleActions: 'play none none none' }
             });
             gsap.from('.allocation-row', {
-                duration: 0.7, x: -50, opacity: 0, stagger: 0.1, ease: 'power3.out',
+                duration: 0.4, x: -50, opacity: 0, stagger: 0.05, ease: 'power3.out',
                 scrollTrigger: { trigger: '.allocation-container', start: 'top 70%' }
             });
             gsap.from('.utility-card', {
-                duration: 0.8, y: 50, opacity: 0, stagger: 0.15, ease: 'back.out(1.7)',
+                duration: 0.5, y: 50, opacity: 0, stagger: 0.08, ease: 'back.out(1.7)',
                 scrollTrigger: { trigger: '.utility-grid', start: 'top 80%' }
             });
         }, pageRef);
