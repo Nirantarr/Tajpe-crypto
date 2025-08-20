@@ -72,9 +72,6 @@ const AboutUs = () => {
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto hero-subtitle">
                         Tajpe isn't just a project; it's an ecosystem. We are architects of the decentralized future, building the tools for a new generation of finance and technology.
                     </p>
-                    <button className="mt-6 md:mt-8 lg:mt-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-3 md:py-4 px-8 md:px-10 rounded-full text-base md:text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hero-button">
-                        Explore Our Vision
-                    </button>
                 </div>
             </section>
 
