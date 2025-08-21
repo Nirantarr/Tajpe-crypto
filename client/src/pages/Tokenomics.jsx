@@ -90,7 +90,7 @@ const Tokenomics = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                 
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl md:text-7xl font-black uppercase text-gray-900 page-title" style={{ fontFamily: '"Libertinus Serif", serif' }}>
+                    <h1 className="text-5xl md:text-7xl font-black uppercase text-gray-900 page-title" style={{ fontFamily: "'Ubuntu', sans-serif" }}>
                         $TJE <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Tokenomics</span>
                     </h1>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -133,7 +133,7 @@ const Tokenomics = () => {
                             </div>
                         </div>
                         <div className="allocation-container">
-                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Orbitron, sans-serif' }}>Distribution</h2>
+                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: "'Ubuntu', sans-serif" }}>Distribution</h2>
                             {tokenData.distribution.map((item, index) => (
                                 <AllocationRow key={index} item={item} index={index} />
                             ))}
@@ -143,7 +143,7 @@ const Tokenomics = () => {
                 
                 <div className="py-24">
                     <div className="text-center mb-16">
-                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>
+                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: "'Ubuntu', sans-serif" }}>
                             Token <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Utility</span>
                         </h2>
                         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -153,22 +153,22 @@ const Tokenomics = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 utility-grid">
                         <div className="bg-white p-8 rounded-2xl shadow-lg text-center utility-card border-t-4 border-indigo-500">
                              <i className="fas fa-vote-yea text-4xl text-indigo-500 mb-4"></i>
-                            <h3 className="text-xl font-bold mb-2">Governance</h3>
+                            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Ubuntu', sans-serif" }}>Governance</h3>
                             <p className="text-gray-500">Shape the future by voting on proposals.</p>
                         </div>
                          <div className="bg-white p-8 rounded-2xl shadow-lg text-center utility-card border-t-4 border-purple-500">
                              <i className="fas fa-hand-holding-usd text-4xl text-purple-500 mb-4"></i>
-                            <h3 className="text-xl font-bold mb-2">Staking</h3>
+                            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Ubuntu', sans-serif" }}>Staking</h3>
                             <p className="text-gray-500">Earn passive rewards by securing the network.</p>
                         </div>
                          <div className="bg-white p-8 rounded-2xl shadow-lg text-center utility-card border-t-4 border-pink-500">
                              <i className="fas fa-exchange-alt text-4xl text-pink-500 mb-4"></i>
-                            <h3 className="text-xl font-bold mb-2">Fee Payments</h3>
+                            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Ubuntu', sans-serif" }}>Fee Payments</h3>
                             <p className="text-gray-500">Get discounts on trading fees on our platform.</p>
                         </div>
                          <div className="bg-white p-8 rounded-2xl shadow-lg text-center utility-card border-t-4 border-amber-500">
                              <i className="fas fa-lock text-4xl text-amber-500 mb-4"></i>
-                            <h3 className="text-xl font-bold mb-2">Exclusive Access</h3>
+                            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Ubuntu', sans-serif" }}>Exclusive Access</h3>
                             <p className="text-gray-500">Unlock premium features, airdrops, and more.</p>
                         </div>
                     </div>

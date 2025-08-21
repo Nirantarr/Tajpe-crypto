@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const FeatureCard = ({ icon, title, children }) => (
     <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg text-center feature-card transform hover:-translate-y-2 transition-transform duration-300">
         <div className="text-5xl text-indigo-600 mb-4">{icon}</div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: '"Libertinus Serif", serif' }}>{title}</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: '"Ubuntu", serif' }}>{title}</h3>
         <p className="text-gray-600">{children}</p>
     </div>
 );
@@ -66,7 +66,7 @@ const AboutUs = () => {
 
           <section className="bg-white min-h-[50vh] md:min-h-[60vh] lg:min-h-[80vh] flex items-center justify-center text-center px-4 py-8 md:py-12 lg:py-16">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase hero-title text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>
+                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase hero-title text-gray-900" style={{ fontFamily: '"Ubuntu", serif' }}>
                         Forging the <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">New Digital</span> Frontier
                     </h1>
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto hero-subtitle">
@@ -79,17 +79,17 @@ const AboutUs = () => {
             <section className="py-12 md:py-20 px-4 md:px-8 section">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div className="text-center md:text-left">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>Our Vision: <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Your Gateway</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Ubuntu", serif' }}>Our Vision: <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Your Gateway</span></h2>
                         <p className="text-gray-600 mb-6 text-lg">
                             The future of digital assets should be secure, accessible, and empowering. Our primary goal is to build a comprehensive ecosystem starting with two core products:
                         </p>
                         <div className="space-y-6">
                             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
-                                <h4 className="text-xl font-bold text-indigo-600 flex items-center gap-3" style={{ fontFamily: '"Libertinus Serif", serif' }}><i className="fas fa-wallet"></i> The Tajpe Wallet</h4>
+                                <h4 className="text-xl font-bold text-indigo-600 flex items-center gap-3" style={{ fontFamily: '"Ubuntu", serif' }}><i className="fas fa-wallet"></i> The Tajpe Wallet</h4>
                                 <p className="text-gray-500 mt-2">A non-custodial, multi-chain wallet that puts security and user experience first. Manage your TJE tokens, NFTs, and thousands of other assets with unparalleled ease.</p>
                             </div>
                              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
-                                <h4 className="text-xl font-bold text-purple-600 flex items-center gap-3" style={{ fontFamily: '"Libertinus Serif", serif' }}><i className="fas fa-chart-line"></i> The Tajpe Trading Platform</h4>
+                                <h4 className="text-xl font-bold text-purple-600 flex items-center gap-3" style={{ fontFamily: '"Ubuntu", serif' }}><i className="fas fa-chart-line"></i> The Tajpe Trading Platform</h4>
                                 <p className="text-gray-500 mt-2">A high-performance, low-fee trading site designed for both novice and professional traders. Experience deep liquidity, advanced tools, and seamless asset swapping.</p>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ const AboutUs = () => {
             {/* --- The TJE Token Section --- */}
              <section className="py-12 md:py-20 px-4 md:px-8 bg-white section border-t border-b border-gray-200">
                 <div className="text-center max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>The <span className="text-purple-600">$TJE</span> Token</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Ubuntu", serif' }}>The <span className="text-purple-600">$TJE</span> Token</h2>
                     <p className="text-lg text-gray-600 mb-12">
                        $TJE is the lifeblood of the Tajpe ecosystem. It is a utility token designed to power our platforms, reward our community, and facilitate governance.
                     </p>
@@ -130,7 +130,7 @@ const AboutUs = () => {
             {/* --- Beyond Crypto Section --- */}
             <section className="py-12 md:py-20 px-4 md:px-8 section">
                  <div className="text-center max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Libertinus Serif", serif' }}>More Than A <span className="text-indigo-600">Crypto</span> Project</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Ubuntu", serif' }}>More Than A <span className="text-indigo-600">Crypto</span> Project</h2>
                     <p className="text-lg text-gray-600 mb-12">
                         Our strength lies in our diverse foundation. Tajpe is the culmination of years of experience across multiple cutting-edge industries. This cross-pollination of ideas is our unique advantage.
                     </p>
@@ -138,17 +138,17 @@ const AboutUs = () => {
                 <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 text-center">
                     <div className="p-6">
                         <i className="fas fa-brain text-5xl text-purple-500 mb-4"></i>
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2" style={{ fontFamily: '"Libertinus Serif", serif' }}>Artificial Intelligence</h3>
+                        <h3 className="text-2xl font-bold text-gray-800 mb-2" style={{ fontFamily: '"Ubuntu", serif' }}>Artificial Intelligence</h3>
                         <p className="text-gray-500">Leveraging AI for intelligent analytics, on-chain security monitoring, and personalized user experiences within our trading platform.</p>
                     </div>
                      <div className="p-6">
                         <i className="fas fa-cubes text-5xl text-indigo-500 mb-4"></i>
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2" style={{ fontFamily: '"Libertinus Serif", serif' }}>Blockchain Core</h3>
+                        <h3 className="text-2xl font-bold text-gray-800 mb-2" style={{ fontFamily: '"Ubuntu", serif' }}>Blockchain Core</h3>
                         <p className="text-gray-500">Our deep expertise in DLT ensures that our products are built on a foundation of security, decentralization, and scalability.</p>
                     </div>
                      <div className="p-6">
                         <i className="fas fa-graduation-cap text-5xl text-purple-500 mb-4"></i>
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2" style={{ fontFamily: '"Libertinus Serif", serif' }}>Education & Onboarding</h3>
+                        <h3 className="text-2xl font-bold text-gray-800 mb-2" style={{ fontFamily: '"Ubuntu", serif' }}>Education & Onboarding</h3>
                         <p className="text-gray-500">We are committed to demystifying crypto. Our educational initiatives will empower users to navigate the Web3 world safely and confidently.</p>
                     </div>
                 </div>

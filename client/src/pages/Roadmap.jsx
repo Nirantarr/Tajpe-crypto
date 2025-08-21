@@ -77,7 +77,7 @@ const RoadmapItem = ({ data, isOdd }) => {
             {/* Content Card */}
             <div className="bg-white rounded-xl shadow-lg w-full md:w-5/12 p-6 md:p-8">
                 <p className={`font-semibold ${data.color}`}>{data.quarter} <span className="text-gray-500 font-normal">({data.date})</span></p>
-                <h3 className="text-2xl font-bold text-gray-900 mt-1 mb-4" style={{ fontFamily: 'Orbitron, sans-serif' }}>{data.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mt-1 mb-4" style={{ fontFamily: 'Ubuntu, sans-serif' }}>{data.title}</h3>
                 <ul className="space-y-3 text-gray-600">
                     {data.points.map((point, index) => (
                         <li key={index} className="flex items-start">
@@ -156,7 +156,7 @@ const Roadmap = () => {
                 
                 {/* --- Header --- */}
                 <div className="text-center mb-12 md:mb-20">
-                    <h1 className="text-5xl md:text-7xl font-black uppercase text-gray-900 page-title" style={{ fontFamily: '"Libertinus Serif", serif' }}>
+                    <h1 className="text-5xl md:text-7xl font-black uppercase text-gray-900 page-title" style={{ fontFamily: '"Ubuntu", sans-serif' }}>
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Roadmap</span>
                     </h1>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">

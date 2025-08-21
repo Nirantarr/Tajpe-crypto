@@ -16,8 +16,8 @@ const CryptoWatchlist = () => {
     return (
         <div className="bg-white p-4 h-full">
             <div className="flex justify-between items-center mb-4">
-                 {/* Use Orbitron for the title to match other components */}
-                <h3 className="font-bold text-xl text-gray-800" style={{ fontFamily: 'Orbitron, sans-serif' }}>Watchlist</h3>
+                 {/* Use Ubuntu for the title to match other components */}
+                <h3 className="font-bold text-xl text-gray-800" style={{ fontFamily: 'Ubuntu, sans-serif' }}>Watchlist</h3>
                 <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
             </div>
             <ul className="space-y-3">
@@ -68,10 +68,10 @@ const HomePage = () => {
                     
                     {/* Left Column (Text Content) */}
                     <div className="w-full md:w-1/2 text-center md:text-left animate-fade-in-up">
-                        {/* Apply Orbitron and uppercase for the main headline, consistent with other pages */}
+                        {/* Apply Ubuntu and uppercase for the main headline, consistent with other pages */}
                       <h2 
                         className="text-4xl md:text-5xl lg:text-6xl font-black uppercase text-gray-900 leading-tight mb-6" 
-                        style={{ fontFamily: '"Libertinus Serif", serif' }}
+                        style={{ fontFamily: '"Ubuntu", serif' }}
                     >
                         Welcome to the Future with <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Tajpe</span>
                     </h2>

@@ -1,5 +1,7 @@
 /* If you are not using Tailwind CSS, remove these lines. Otherwise, configure your build tool to support Tailwind. */
 /* @import "tailwindcss"; */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Add this at the top of your main CSS file */

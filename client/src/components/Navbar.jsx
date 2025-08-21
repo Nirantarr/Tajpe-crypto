@@ -46,7 +46,7 @@ const Navbar = () => {
             <img src={TajpeLogo} alt="Tajpe Logo" className="w-10 h-10" />
             <h1
               className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text"
-              style={{ fontFamily: 'Orbitron, sans-serif' }}
+              style={{ fontFamily: 'Ubuntu, sans-serif' }}
             >
               Tajpe
             </h1>
