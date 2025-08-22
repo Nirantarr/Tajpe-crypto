@@ -18,7 +18,7 @@ const Building = () => {
     <section className="bg-white py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="bg-blue-600 rounded-3xl p-10 sm:p-16"
+          className="bg-tajpe-500 rounded-3xl p-10 sm:p-16"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -31,13 +31,13 @@ const Building = () => {
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
                 Building on Trust
               </h2>
-              <p className="mt-4 text-lg text-blue-100 max-w-lg">
+              <p className="mt-4 text-lg text-tajpe-100 max-w-lg">
                 We know that working together as a community is better for everyone. Our platform enables blockchain developers to build their dApps and wallets natively and connect with millions of users, without having to worry about the low-level implementation details.
               </p>
               <div className="mt-8">
                 <Link
-                  to="/develop/docs" // This path should point to your developer docs page
-                  className="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full text-base hover:bg-blue-100 transition-colors duration-300"
+                  to="/" // This path should point to your developer docs page
+                  className="inline-block bg-white text-tajpe-500 font-semibold px-8 py-3 rounded-full text-base hover:bg-tajpe-100 transition-colors duration-300"
                 >
                   Check out our Developer Docs
                 </Link>

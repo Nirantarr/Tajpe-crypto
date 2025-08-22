@@ -25,7 +25,7 @@ const allAssets = [
 // Helper component for the check/cross icons
 const StatusIcon = ({ available }) => {
   if (available) {
-    return <CheckCircle2 className="h-6 w-6 text-blue-600" />;
+    return <CheckCircle2 className="h-6 w-6 text-tajpe-500" />;
   }
   return <XCircle className="h-6 w-6 text-gray-300" />;
 };
@@ -61,7 +61,7 @@ const Platform = () => {
 
   return (
     <motion.section 
-      className="bg-gradient-to-b from-green-500 to-blue-600 py-20 sm:py-28"
+      className="bg-gradient-to-b from-tajpe-500 to-tajpe-950 py-20 sm:py-28"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
@@ -73,7 +73,7 @@ const Platform = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
             One Platform, Millions of Assets
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-blue-100">
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-tajpe-100">
             As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more.
           </p>
         </div>
@@ -98,13 +98,13 @@ const Platform = () => {
         <div className="mt-8 bg-white rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-4 sm:p-6">
             {/* Table Header */}
-            <div className="hidden md:grid grid-cols-6 gap-4 text-sm font-semibold text-gray-500 pb-4 border-b">
+            <div className="hidden md:grid grid-cols-7 gap-2 text-sm font-semibold text-gray-500 pb-4 border-b">
               <div className="col-span-2">Chain</div>
+              <div className="text-center">dApps</div>
               <div className="text-center">Buy</div>
               <div className="text-center">Sell</div>
               <div className="text-center">Swap</div>
               <div className="text-center">Earn</div>
-              <div className="text-center">dApps</div>
             </div>
             
             {/* Table Body */}
@@ -119,7 +119,7 @@ const Platform = () => {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.3 }}
-                    className="grid grid-cols-2 md:grid-cols-6 gap-4 items-center py-4 border-b last:border-b-0"
+                    className="grid grid-cols-2 md:grid-cols-7 gap-2 items-center py-4 border-b last:border-b-0"
                   >
                     {/* Chain Name & Logo */}
                     <div className="flex items-center gap-4 col-span-2 md:col-span-2">
@@ -130,12 +130,33 @@ const Platform = () => {
                       </div>
                     </div>
 
-                    {/* Feature Icons */}
-                    <div className="hidden md:flex justify-center"><StatusIcon available={asset.features.buy} /></div>
-                    <div className="hidden md:flex justify-center"><StatusIcon available={asset.features.sell} /></div>
-                    <div className="hidden md:flex justify-center"><StatusIcon available={asset.features.swap} /></div>
-                    <div className="hidden md:flex justify-center"><StatusIcon available={asset.features.earn} /></div>
-                    <div className="hidden md:flex justify-center"><StatusIcon available={asset.features.dapps} /></div>
+                                         {/* Feature Icons - Each in its own column */}
+                     <div className="hidden md:flex justify-center items-center"><StatusIcon available={asset.features.dapps} /></div>
+                     <div className="hidden md:flex justify-center items-center"><StatusIcon available={asset.features.buy} /></div>
+                     <div className="hidden md:flex justify-center items-center"><StatusIcon available={asset.features.sell} /></div>
+                     <div className="hidden md:flex justify-center items-center"><StatusIcon available={asset.features.swap} /></div>
+                     <div className="hidden md:flex justify-center items-center"><StatusIcon available={asset.features.earn} /></div>
+                    
+                    {/* Mobile Feature Display */}
+                    <div className="md:hidden col-span-2 mt-2">
+                      <div className="flex flex-wrap gap-2 text-xs">
+                        <span className={`px-2 py-1 rounded-full ${asset.features.buy ? 'bg-tajpe-100 text-tajpe-800' : 'bg-gray-100 text-gray-500'}`}>
+                          Buy {asset.features.buy ? '✓' : '✗'}
+                        </span>
+                        <span className={`px-2 py-1 rounded-full ${asset.features.sell ? 'bg-tajpe-100 text-tajpe-800' : 'bg-gray-100 text-gray-500'}`}>
+                          Sell {asset.features.sell ? '✓' : '✗'}
+                        </span>
+                        <span className={`px-2 py-1 rounded-full ${asset.features.swap ? 'bg-tajpe-100 text-tajpe-800' : 'bg-gray-100 text-gray-500'}`}>
+                          Swap {asset.features.swap ? '✓' : '✗'}
+                        </span>
+                        <span className={`px-2 py-1 rounded-full ${asset.features.earn ? 'bg-tajpe-100 text-tajpe-800' : 'bg-gray-100 text-gray-500'}`}>
+                          Earn {asset.features.earn ? '✓' : '✗'}
+                        </span>
+                        <span className={`px-2 py-1 rounded-full ${asset.features.dapps ? 'bg-tajpe-100 text-tajpe-800' : 'bg-gray-100 text-gray-500'}`}>
+                          dApps {asset.features.dapps ? '✓' : '✗'}
+                        </span>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </AnimatePresence>

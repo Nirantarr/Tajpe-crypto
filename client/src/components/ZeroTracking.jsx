@@ -47,7 +47,7 @@ const ZeroTracking = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-lime-300 via-green-400 to-emerald-400 py-20 sm:py-28">
+    <section className="bg-gradient-to-b from-tajpe-100 via-tajpe-200 to-tajpe-300 py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Headlines */}
@@ -77,7 +77,7 @@ const ZeroTracking = () => {
                 We secure your wallet, but don’t control or have access to your private keys or secret phrase - only you do.
               </p>
               <div className="mt-8">
-                <Link to="/get-started" className="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-full text-base hover:bg-blue-700 transition-colors duration-300">
+                <Link to="/" className="inline-block bg-tajpe-500 text-white font-semibold px-8 py-3 rounded-full text-base hover:bg-tajpe-600 transition-colors duration-300">
                   Get Started
                 </Link>
               </div>
@@ -113,8 +113,8 @@ const ZeroTracking = () => {
         {/* Final CTA Button */}
         <div className="mt-16 text-center">
             <Link 
-                to="/privacy"
-                className="inline-block border-2 border-white   font-bold px-8 py-3 rounded-full  hover:bg-green-50   transition-colors duration-300"
+                to="/"
+                                  className="inline-block border-2 border-white font-bold px-8 py-3 rounded-full hover:bg-tajpe-50 transition-colors duration-300"
             >
                 Learn more about privacy & security
             </Link>

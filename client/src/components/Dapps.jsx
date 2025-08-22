@@ -17,7 +17,7 @@ const Dapps = () => {
 
   return (
     // Section with the custom soft gradient background
-    <section className="bg-gradient-to-br from-[#FEF3E9] to-[#F0CFE9] py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-tajpe-50 to-tajpe-100 py-20 sm:py-28">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Headlines */}
@@ -50,8 +50,8 @@ const Dapps = () => {
               </p>
               <div className="mt-8">
                 <Link
-                  to="/deposits" // Update this path as needed
-                  className="inline-block border-2 border-blue-600 text-blue-600 font-semibold px-6 py-2.5 rounded-full text-base hover:bg-blue-50 hover:text-blue-700 transition-colors duration-300"
+                  to="/" // Update this path as needed
+                  className="inline-block border-2 border-tajpe-500 text-tajpe-500 font-semibold px-6 py-2.5 rounded-full text-base hover:bg-tajpe-50 hover:text-tajpe-600 transition-colors duration-300"
                 >
                   Get started with deposits
                 </Link>
